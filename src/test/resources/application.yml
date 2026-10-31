@@ -1,0 +1,22 @@
+spring:
+  datasource:
+    url: jdbc:h2:mem:access-recovery-test;DB_CLOSE_DELAY=-1;LOCK_TIMEOUT=10000
+    username: sa
+    password: ''
+  jpa:
+    open-in-view: false
+    hibernate:
+      ddl-auto: create-drop
+  jackson:
+    default-property-inclusion: non_null
+  mvc:
+    problemdetails:
+      enabled: true
+
+recovery:
+  scheduling:
+    enabled: false
+  retry-delay-ms: 5000
+
+app:
+  seed-demo-reservations: false
